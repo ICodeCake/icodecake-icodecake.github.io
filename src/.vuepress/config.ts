@@ -47,6 +47,7 @@ export default defineUserConfig({
     lastUpdatedText: "上次更新",
     contributors: true,
     contributorsText: "贡献者",
+    sidebarDepth: 2,
     navbar: [
       { text: ".NET", link: "/code/dotnet/" },
       { text: "WEB", link: "/code/web/" },
@@ -78,21 +79,33 @@ export default defineUserConfig({
       //   ],
       // },
     ],
-    // sidebar: [
-    //   {
-    //     text: "Foo",
-    //     link: "/foo/",
-    //     children: [
-    //       {
-    //         text: "github",
-    //         link: "https://github.com",
-    //         children: [],
-    //       },
-    //       "/foo/bar.md",
-    //     ],
-    //   },
-    //   // 字符串 - 页面文件路径
-    //   "/bar/README.md",
-    // ],
+    sidebar: {
+      '/code/web/': [
+        {
+          text: 'Html',
+          children: [],
+        },
+        {
+          text: 'Css',
+          children: [
+            {
+              text: 'Translate vs Position',
+              link: '/code/web/css/TransformVsPosition',
+              children: [],
+            },
+          ],
+        },
+        {
+          text: 'TypeScript or JavaScript',
+          children: [
+            {
+              text: 'Null vs Undefined',
+              link: '/code/web/ts/NullVsUndefined',
+              children: [],
+            },
+          ],
+        },
+      ],
+    },
   }),
 });
