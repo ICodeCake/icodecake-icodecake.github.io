@@ -106,6 +106,27 @@ export default defineUserConfig({
           ],
         },
       ],
+      '/code/dotnet/': [
+        {
+          text: 'WPF',
+          children: [],
+        },
+        {
+          text: 'C#',
+          children: [
+          ],
+        },
+        {
+          text: 'Other',
+          children: [
+            {
+              text: 'Win10 aux,com1~com9,prn,con,nul文件命名无效',
+              link: '/code/dotnet/InvalidFileName',
+              children: [],
+            },
+          ],
+        },
+      ],
     },
   }),
 });
