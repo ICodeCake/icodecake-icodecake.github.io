@@ -109,11 +109,57 @@ export default defineUserConfig({
       '/code/dotnet/': [
         {
           text: 'WPF',
-          children: [],
+          children: [
+            {
+              text: 'WPF UI Layout',
+              link: '/code/dotnet/WpfUILayout',
+              children: [],
+            },
+            {
+              text: 'XAML Binding',
+              link: '/code/dotnet/XAMLBinding',
+              children: [],
+            },
+            {
+              text: '中英文切换',
+              link: '/code/dotnet/Language',
+              children: [],
+            },
+          ],
         },
         {
           text: 'C#',
           children: [
+            {
+              text: '多线程',
+              children: [
+                {
+                  text: 'BackgroundWorker',
+                  link: '/code/dotnet/Multithreading/BackgroundWorker/',
+                  children: [],
+                },
+                {
+                  text: 'Thread Or Task',
+                  link: '/code/dotnet/Multithreading/ThreadOrTask/',
+                  children: [],
+                },
+                {
+                  text: 'Parallel',
+                  link: '/code/dotnet/Multithreading/Parallel/',
+                  children: [],
+                },
+                {
+                  text: 'Async Await',
+                  link: '/code/dotnet/Multithreading/AsyncAndAwait/',
+                  children: [],
+                },
+              ],
+            },
+            {
+              text: 'Log4Net',
+              link: '/code/dotnet/Log4Net/',
+              children: [],
+            },
           ],
         },
         {
