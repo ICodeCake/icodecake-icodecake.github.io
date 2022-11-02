@@ -1,4 +1,4 @@
-## HttpContext.Features 与 HttpContext.Items
+<!-- ## HttpContext.Features 与 HttpContext.Items
 
 最大的区别是 ​​HttpContext.Items​​​ 是设计用来存储 ​​键-值​​​ 对的，而 ​​HttpContext.Features​​​ 是设计用来存储 ​​类型-实例​​ 对的。
 ​​HttpContext.Items​​​ 用来存储在当前请求上下文中共享的数据，而 ​​HttpContext.Features​​​ 中是一个 ​​IFeatureCollection​​ 的实例，与 Items 完全不同。
@@ -38,4 +38,4 @@ public class FeatureCollection : IFeatureCollection
 
 - HttpContext.Items 是设计用来存储在单个请求中短期存在的数据。
 - HttpContext.Features 是设计用来共享不同的 HTTP 特性的，这使得中间件可以创建或者修改应用程序的主机处理管线。通过 .NET 本身已经创建了一系列的特性，例如 IHttpSendFileFeature。
-应该只使用 HttpContext.Items 来存储数据，使用 HttpContext.Features 来添加新的其它中间件可能会使用的 HTTP 特性。
+应该只使用 HttpContext.Items 来存储数据，使用 HttpContext.Features 来添加新的其它中间件可能会使用的 HTTP 特性。 -->

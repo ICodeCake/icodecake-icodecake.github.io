@@ -1,4 +1,4 @@
-#### 关于0.1+0.2 不等于0.3 
+<!-- #### 关于0.1+0.2 不等于0.3 
 [参考网址](https://cloud.tencent.com/developer/article/1586532)
 
 > 0.1+0.2=0.30000000000000004     0.7+0.1 = 0.7999999999999999
@@ -65,11 +65,11 @@ IEE754:       1.10011001100110011001100110011001100110010
 
 这个时候我们只要判断(0.1+0.2)-0.3小于Number.EPSILON，在这个误差的范围内就可以判定0.1+0.2===0.3为true。
 
-```
+```ts
 function numbersequal(a,b){ 
   return Math.abs(a-b)<Number.EPSILON;
 } 
 var a=0.1+0.2， b=0.3;
 console.log(numbersequal(a,b)); //true
 ```
-
+ -->

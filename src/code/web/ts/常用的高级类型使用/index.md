@@ -1,4 +1,4 @@
-#### 1）、Partial<Type>
+<!-- #### 1）、Partial<Type>
 》Partial<T> 可以快速把某个接口类型中定义的属性变成可选的
 源代码
 ```
@@ -354,4 +354,4 @@ type T2 = Parameters<<T>(arg: T) => T>;
      
 type T2 = [arg: unknown]
 ```
-项目实战无
+项目实战无 -->

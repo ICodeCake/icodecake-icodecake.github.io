@@ -1,4 +1,4 @@
-# C#、DotNet中常见的性能优化点
+<!-- # C#、DotNet中常见的性能优化点
 
 ## Benchmark和源码查询
 *Know What Things Cost.* （了解事情的成本）
@@ -96,4 +96,4 @@ Hot Path中的方法实现应该尽量设计周全，进行必要的**Benchmark*
 -  https://michaelscodingspot.com/performance-problems-in-csharp-dotnet/
 -  https://michaelscodingspot.com/avoid-gc-pressure/
 -  https://www.dotnetperls.com/optimization
--  https://github.com/adamsitnik/awesome-dot-net-performance
+-  https://github.com/adamsitnik/awesome-dot-net-performance -->

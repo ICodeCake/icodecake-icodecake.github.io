@@ -1,4 +1,4 @@
-# SpanView<T>和ArrayView<T>使用指南
+<!-- # SpanView<T>和ArrayView<T>使用指南
 ## Introduction 简介
 [Span](https://github.com/dotnet/corefxlab/blob/master/docs/specs/span.md)和[Memory](https://github.com/dotnet/corefxlab/blob/master/docs/specs/memory.md)是C# 7.2引入的新的数据结构类型，提高底层算法性能。
 
@@ -139,4 +139,4 @@ File.ReadAllSpan()和SpanView.FromFile都可以使用。
 ## Reference 参考
 [ref struct](https://docs.microsoft.com/zh-cn/dotnet/csharp/write-safe-efficient-code)
 
-[Span简介](https://www.cnblogs.com/uoyo/p/12207148.html)
+[Span简介](https://www.cnblogs.com/uoyo/p/12207148.html) -->
