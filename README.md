@@ -4,21 +4,21 @@
 
 由于用户名和邮箱会显示在文章的末尾（贡献者位置），请谨慎配置，建议每个贡献者使用唯一的用户名和邮箱
 
-- 查看用户名 git config user.name
-- 查看邮箱 git config user.email
-- 配置当前项目用户名 git config user.name "Z 小染"
-- 配置当前项目邮箱 git config user.email "ryning@sina.com"
+- 查看用户名 `git config user.name`
+- 查看邮箱 `git config user.email`
+- 配置当前项目用户名 `git config user.name "Z小染"`
+- 配置当前项目邮箱 `git config user.email "ryning@sina.com"`
 
 如果需要全局统一用户名，请使用如下命令（不建议）
 
-- 配置用户名 git config --global user.name "Z 小染"
-- 配置邮箱 git config --global user.email "ryning@sina.com"
+- 配置用户名 `git config --global user.name "Z小染"`
+- 配置邮箱 `git config --global user.email "ryning@sina.com"`
 
 ## 运行命令 ⚡
 
-- pnpm install 安装
-- pnpm dev 运行测试环境
-- pnpm build 构建生产环境
+- `pnpm install` 安装
+- `pnpm dev` 运行测试环境
+- `pnpm build` 构建生产环境
 
 ## 编写规范 💬
 
