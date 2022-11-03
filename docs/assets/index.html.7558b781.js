@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-c8241298","path":"/code/dotnet/DynamicMeanNumber/","title":"\u52A8\u6001\u5E73\u5747\u6570","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1666856013000,"contributors":[{"name":"Z\u5C0F\u67D3","email":"ryning@sina.com","commits":1}]},"filePathRelative":"code/dotnet/DynamicMeanNumber/index.md"}');export{e as data};
