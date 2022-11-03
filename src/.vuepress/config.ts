@@ -80,99 +80,104 @@ export default defineUserConfig({
       // },
     ],
     sidebar: {
-      '/code/web/': [
+      "/code/web/": [
         {
-          text: 'Html',
+          text: "Html",
           children: [],
         },
         {
-          text: 'Css',
+          text: "Css",
           children: [
             {
-              text: 'Translate vs Position',
-              link: '/code/web/css/TransformVsPosition',
+              text: "Translate vs Position",
+              link: "/code/web/css/TransformVsPosition",
               children: [],
             },
           ],
         },
         {
-          text: 'TypeScript or JavaScript',
+          text: "TypeScript or JavaScript",
           children: [
             {
-              text: 'Null vs Undefined',
-              link: '/code/web/ts/NullVsUndefined',
+              text: "Null vs Undefined",
+              link: "/code/web/ts/NullVsUndefined",
+              children: [],
+            },
+            {
+              text: "TsNote",
+              link: "/code/web/ts/TsNote",
               children: [],
             },
           ],
         },
       ],
-      '/code/dotnet/': [
+      "/code/dotnet/": [
         {
-          text: 'WPF',
+          text: "WPF",
           children: [
             {
-              text: 'WPF UI Layout',
-              link: '/code/dotnet/WpfUILayout',
+              text: "WPF UI Layout",
+              link: "/code/dotnet/WpfUILayout",
               children: [],
             },
             {
-              text: 'XAML Binding',
-              link: '/code/dotnet/XAMLBinding',
+              text: "XAML Binding",
+              link: "/code/dotnet/XAMLBinding",
               children: [],
             },
             {
-              text: '中英文切换',
-              link: '/code/dotnet/Language',
+              text: "中英文切换",
+              link: "/code/dotnet/Language",
               children: [],
             },
           ],
         },
         {
-          text: 'C#',
+          text: "C#",
           children: [
             {
-              text: '多线程',
+              text: "多线程",
               children: [
                 {
-                  text: 'BackgroundWorker',
-                  link: '/code/dotnet/Multithreading/BackgroundWorker/',
+                  text: "BackgroundWorker",
+                  link: "/code/dotnet/Multithreading/BackgroundWorker/",
                   children: [],
                 },
                 {
-                  text: 'Thread Or Task',
-                  link: '/code/dotnet/Multithreading/ThreadOrTask/',
+                  text: "Thread Or Task",
+                  link: "/code/dotnet/Multithreading/ThreadOrTask/",
                   children: [],
                 },
                 {
-                  text: 'Parallel',
-                  link: '/code/dotnet/Multithreading/Parallel/',
+                  text: "Parallel",
+                  link: "/code/dotnet/Multithreading/Parallel/",
                   children: [],
                 },
                 {
-                  text: 'Async Await',
-                  link: '/code/dotnet/Multithreading/AsyncAndAwait/',
+                  text: "Async Await",
+                  link: "/code/dotnet/Multithreading/AsyncAndAwait/",
                   children: [],
                 },
               ],
             },
             {
-              text: 'Log4Net',
-              link: '/code/dotnet/Log4Net/',
+              text: "Log4Net",
+              link: "/code/dotnet/Log4Net/",
               children: [],
             },
           ],
         },
         {
-          text: 'Other',
+          text: "Other",
           children: [
             {
-              text: 'Win10 aux,com1~com9,prn,con,nul文件命名无效',
-              link: '/code/dotnet/InvalidFileName',
+              text: "Win10 aux,com1~com9,prn,con,nul文件命名无效",
+              link: "/code/dotnet/InvalidFileName",
               children: [],
             },
             {
-              text: 'C#调用Matlab函数',
-              link: '/code/dotnet/matlab',
+              text: "C#调用Matlab函数",
+              link: "/code/dotnet/matlab",
               children: [],
             },
           ],
