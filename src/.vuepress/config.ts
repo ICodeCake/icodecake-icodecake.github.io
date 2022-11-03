@@ -160,15 +160,6 @@ export default defineUserConfig({
               link: '/code/dotnet/Log4Net/',
               children: [],
             },
-            {
-              text: 'Matlab',
-              link: '/code/dotnet/Log4Net/',
-              children: [{
-                text: 'C#调用Matlab函数',
-                link: '/code/dotnet/matlab',
-                children: [],
-              },],
-            },
           ],
         },
         {
@@ -177,6 +168,11 @@ export default defineUserConfig({
             {
               text: 'Win10 aux,com1~com9,prn,con,nul文件命名无效',
               link: '/code/dotnet/InvalidFileName',
+              children: [],
+            },
+            {
+              text: 'C#调用Matlab函数',
+              link: '/code/dotnet/matlab',
               children: [],
             },
           ],
