@@ -91,20 +91,19 @@ Console.ReadKey();
 
 ## matlab
 
-```matlab
+```matlab{10-12,22}
 % predictFcn.m
 
 function result = predictFcn(inputData)
 if ismatrix(inputData) && size(inputData,2) == 30
     T = inputData;
 else
-    error('stats:mlearnapp:DeployedModelError', '输入参数必须为 30 列矩阵。');
+    error('输入参数必须为 30 列矩阵');
 end
 
-fileData = load('TrainedClassificationModel.mat');
+fileData = load('Model.mat');
 model = fileData.trainedModel;
 result = model.predictFcn(T);
-
 end
 
 % mian.m
@@ -121,7 +120,7 @@ disp(result);
 
 ## C#
 
-```csharp {6,11}
+```csharp {7-9}
 
 using MathWorks.MATLAB.NET.Arrays;
 using predictFcnNative;
@@ -135,9 +134,7 @@ var res = model.predictFcn(testArray);
 if (res is double[,] array)
 {
     foreach (var item in array)
-    {
         Console.WriteLine(item);
-    }
 }
 
 Console.ReadKey();
