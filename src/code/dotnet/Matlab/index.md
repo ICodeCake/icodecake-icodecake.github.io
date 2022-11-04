@@ -6,7 +6,7 @@
 - VS2022
 
 ::: tip
-对于没有安装matlab的电脑，需要安装对应打包版本的运行时[runtime](https://ww2.mathworks.cn/products/compiler/matlab-runtime.html)
+对于没有安装matlab的电脑，需要安装对应打包版本的运行时[runtime](https://ww2.mathworks.cn/products/compiler/matlab-runtime.html), 这里要跟打包的版本保持一致
 :::
 
 ## Matlab函数打包成DLL
@@ -17,18 +17,15 @@
 
 ```matlab
 % test.m
-
 function [x1,x2] = test(a,b)
 x1 = a + b;
 x2 = a - b;
 end
 
 % mian.m
-
 [sum,diff]=test(1,2);
 disp(sum)
 disp(diff)
-
 ```
 
 运行效果
@@ -78,7 +75,6 @@ MWNumericArray b = new MWNumericArray(4);
 var res = test.test(1, a, b);
 
 Console.ReadKey();
-
 ```
 ::: tip
 
@@ -89,11 +85,10 @@ Console.ReadKey();
 
 ## C# 调用Matlab训练的模型示例
 
-## matlab
+## Matlab
 
-```matlab{10-12,22}
+```matlab{9-11,20}
 % predictFcn.m
-
 function result = predictFcn(inputData)
 if ismatrix(inputData) && size(inputData,2) == 30
     T = inputData;
@@ -107,7 +102,6 @@ result = model.predictFcn(T);
 end
 
 % mian.m
-
 clc
 clear
 data=xlsread("testData.xlsx");
@@ -115,13 +109,22 @@ label=data(:,1); % 第一列是标签列
 testdata=data(:,2:end); % 测试数据从第二列开始
 result=predictFcn(testdata);
 disp(result);
+```
 
+预测方法也可以替换成下面这个版本
+
+``` matlab
+function [label,scores]=predictFcn(inputData)
+load Model.mat
+saveLearnerForCoder(trainedModel.ClassificationSVM,'SVM ')
+compactMdl=loadLearnerForCoder("SVM .mat");
+[label,scores]=predict(compactMdl,inputData);
+end
 ```
 
 ## C#
 
 ```csharp {7-9}
-
 using MathWorks.MATLAB.NET.Arrays;
 using predictFcnNative;
 
