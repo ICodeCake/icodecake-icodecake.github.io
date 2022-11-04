@@ -6,7 +6,7 @@
 - VS2022
 
 ::: tip
-对于没有安装matlab的电脑，需要安装对应打包版本的运行时```runtime```
+对于没有安装matlab的电脑，需要安装对应打包版本的运行时[runtime](https://ww2.mathworks.cn/products/compiler/matlab-runtime.html)
 :::
 
 ## Matlab函数打包成DLL
@@ -64,7 +64,7 @@ matlab命令行输入```deploytool```并回车，调出 Matlab Compiler打包工
 - testNative.dll （[打包生成目录]\for_redistribution_files_only）
 
 ### 调用代码
-```csharp {6,11}
+```csharp {6,9-11}
 using MathWorks.MATLAB.NET.Arrays;
 using testNative;
 
@@ -87,7 +87,62 @@ Console.ReadKey();
 
 :::
 
-## 参考链接
+## C# 调用Matlab训练的模型示例
 
+## matlab
+
+```matlab
+% predictFcn.m
+
+function result = predictFcn(inputData)
+if ismatrix(inputData) && size(inputData,2) == 30
+    T = inputData;
+else
+    error('stats:mlearnapp:DeployedModelError', '输入参数必须为 30 列矩阵。');
+end
+
+fileData = load('TrainedClassificationModel.mat');
+model = fileData.trainedModel;
+result = model.predictFcn(T);
+
+end
+
+% mian.m
+
+clc
+clear
+data=xlsread("testData.xlsx");
+label=data(:,1); % 第一列是标签列
+testdata=data(:,2:end); % 测试数据从第二列开始
+result=predictFcn(testdata);
+disp(result);
+
+```
+
+## C#
+
+```csharp {6,11}
+
+using MathWorks.MATLAB.NET.Arrays;
+using predictFcnNative;
+
+Model model = new Model();
+// 这里构建一个2*30的数据传递给预测方法
+double[,] data = new double[2, 30]; 
+MWNumericArray testArray = new MWNumericArray(data);
+var res = model.predictFcn(testArray);
+
+if (res is double[,] array)
+{
+    foreach (var item in array)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+Console.ReadKey();
+```
+
+## 参考链接
 - [C#调用 Matlab 函数](https://zhuanlan.zhihu.com/p/401106292)
 - [MATLAB Compiler SDK .NET Target Requirements](https://www.mathworks.com/help/compiler_sdk/dotnet/matlab-builder-ne-prerequisites.html)
