@@ -96,21 +96,6 @@ export default defineUserConfig({
           ],
         },
         {
-          text: "Js",
-          children: [
-            {
-              text: "UrlToFile",
-              link: "/code/web/js/UrlToFile",
-              children: [],
-            },
-            {
-              text: "In the Loop",
-              link: "/code/web/js/InTheLoop",
-              children: [],
-            },
-          ],
-        },
-        {
           text: "TypeScript or JavaScript",
           children: [
             {
@@ -121,6 +106,16 @@ export default defineUserConfig({
             {
               text: "TsNote",
               link: "/code/web/ts/TsNote",
+              children: [],
+            },
+            {
+              text: "UrlToFile",
+              link: "/code/web/js/UrlToFile",
+              children: [],
+            },
+            {
+              text: "In the Loop",
+              link: "/code/web/js/InTheLoop",
               children: [],
             },
           ],
@@ -150,6 +145,36 @@ export default defineUserConfig({
         {
           text: "C#",
           children: [
+            {
+              text: "新特性",
+              children: [
+                {
+                  text: "7.0",
+                  link: "/code/dotnet/CSharpNewFeatures/7.0/",
+                  children: [],
+                },
+                {
+                  text: "8.0",
+                  link: "/code/dotnet/CSharpNewFeatures/8.0/",
+                  children: [],
+                },
+                {
+                  text: "9.0",
+                  link: "/code/dotnet/CSharpNewFeatures/9.0/",
+                  children: [],
+                },
+                {
+                  text: "10.0",
+                  link: "/code/dotnet/CSharpNewFeatures/10.0/",
+                  children: [],
+                },
+                {
+                  text: "11.0",
+                  link: "/code/dotnet/CSharpNewFeatures/11.0/",
+                  children: [],
+                },
+              ],
+            },
             {
               text: "多线程",
               children: [
