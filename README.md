@@ -27,7 +27,7 @@
 - 图片在文章中的引用建议使用`![图片](./assets/01.png)`方式，便于位置移动
 - 文章中的图片如果不能很好的使用英文命名，建议使用 01~99 的命名规则
 - 文章中的参考链接使用`- [Code Cake](https://icodecake.github.io/)`
-- 文章中代码引用```后需要标记语言，可使用的标记如（`csharp`,`ts`,`js`.`xml`…）
+- 文章中代码引用```后需要标记语言（可使用的标记如csharp，ts，js，xml，json等）
 
 <!--
 **icodecake/icodecake** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
