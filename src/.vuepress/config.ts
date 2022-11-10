@@ -96,6 +96,21 @@ export default defineUserConfig({
           ],
         },
         {
+          text: "Js",
+          children: [
+            {
+              text: "UrlToFile",
+              link: "/code/web/js/UrlToFile",
+              children: [],
+            },
+            {
+              text: "In the Loop",
+              link: "/code/web/js/InTheLoop",
+              children: [],
+            },
+          ],
+        },
+        {
           text: "TypeScript or JavaScript",
           children: [
             {
