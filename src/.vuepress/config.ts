@@ -110,12 +110,12 @@ export default defineUserConfig({
             },
             {
               text: "UrlToFile",
-              link: "/code/web/js/UrlToFile",
+              link: "/code/web/ts/UrlToFile",
               children: [],
             },
             {
               text: "In the Loop",
-              link: "/code/web/js/InTheLoop",
+              link: "/code/web/ts/InTheLoop",
               children: [],
             },
           ],
