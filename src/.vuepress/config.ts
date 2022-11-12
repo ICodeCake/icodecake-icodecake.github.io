@@ -96,21 +96,6 @@ export default defineUserConfig({
           ],
         },
         {
-          text: "Js",
-          children: [
-            {
-              text: "UrlToFile",
-              link: "/code/web/js/UrlToFile",
-              children: [],
-            },
-            {
-              text: "In the Loop",
-              link: "/code/web/js/InTheLoop",
-              children: [],
-            },
-          ],
-        },
-        {
           text: "TypeScript or JavaScript",
           children: [
             {
@@ -121,6 +106,16 @@ export default defineUserConfig({
             {
               text: "TsNote",
               link: "/code/web/ts/TsNote",
+              children: [],
+            },
+            {
+              text: "UrlToFile",
+              link: "/code/web/ts/UrlToFile",
+              children: [],
+            },
+            {
+              text: "In the Loop",
+              link: "/code/web/ts/InTheLoop",
               children: [],
             },
           ],
