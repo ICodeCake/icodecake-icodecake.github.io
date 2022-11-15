@@ -104,18 +104,38 @@ export default defineUserConfig({
               children: [],
             },
             {
-              text: "TsNote",
+              text: "Ts Note",
               link: "/code/web/ts/TsNote",
               children: [],
             },
             {
-              text: "UrlToFile",
+              text: "Url To File",
               link: "/code/web/ts/UrlToFile",
               children: [],
             },
             {
               text: "In the Loop",
               link: "/code/web/ts/InTheLoop",
+              children: [],
+            },
+          ],
+        },
+        {
+          text: "Vue",
+          children: [
+            {
+              text: "vue3的语法糖",
+              link: "/code/web/vue/vue3的语法糖",
+              children: [],
+            },
+          ],
+        },
+        {
+          text: "Other",
+          children: [
+            {
+              text: "pnpm",
+              link: "/code/web/other/pnpm",
               children: [],
             },
           ],

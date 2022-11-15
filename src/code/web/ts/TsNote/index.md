@@ -6,7 +6,7 @@
 
 通过使用没有严格模式的 tsconfig.json。
 
-```
+```js
 "compilerOptions":{
   "target":"ES2015",
   "module":"commonjs"
@@ -15,7 +15,7 @@
 
 使用严格模式后
 
-```
+```js
 "compilerOptions":{
   "target":"ES2015",
   "module":"commonjs",
@@ -28,7 +28,7 @@
 
 ## 使用 || 确定默认值
 
-```
+```ts
 function createBlogPost(text:string,author:string,date?:Date){
   return {
     text:text,
@@ -41,7 +41,7 @@ function createBlogPost(text:string,author:string,date?:Date){
 它应该是什么样子的呢？
 使用最新的??运算符或者最好是在参数级别定义返回值。
 
-```
+```ts
 function createBlogPost(text:string,author:string,date:Date = new Date()){
   return {
     text:text,
@@ -59,21 +59,21 @@ function createBlogPost(text:string,author:string,date:Date = new Date()){
 
 当我们不确定数据类型的时候，会使用 any 类型的数据。
 
-```
-async function loadProducts():Promise<Product[]>{
-  const response = await fetch('https://api.mysize.com/products')
-  const products:any = await response.json()
-  return products
+```ts
+async function loadProducts(): Promise<Product[]> {
+  const response = await fetch("https://api.mysize.com/products");
+  const products: any = await response.json();
+  return products;
 }
 ```
 
 在所有我们不确定类型的情况下，我们都应该使用 unknown。
 
-```
-async function loadProducts():Promise<Product[]>{
-  const response = await fetch('https://api.mysize.com/products')
-  const products:any = await response.json()
-  return products as Product[]
+```ts
+async function loadProducts(): Promise<Product[]> {
+  const response = await fetch("https://api.mysize.com/products");
+  const products: any = await response.json();
+  return products as Product[];
 }
 ```
 
@@ -87,32 +87,32 @@ async function loadProducts():Promise<Product[]>{
 
 ## val 作为 SomeType
 
-```
-async function loadProducts():Promise<Product[]>{
-  const response = await fetch('https://api.mysize.com/products')
-  const products:any = await response.json()
-  return products as Product[]
+```ts
+async function loadProducts(): Promise<Product[]> {
+  const response = await fetch("https://api.mysize.com/products");
+  const products: any = await response.json();
+  return products as Product[];
 }
 ```
 
 这就是类型守卫的用途。
 
-```
-function isArrayOfProducts(obj:unknown):obj is Product[]{
-  return Array.isArray(obj) && obj.every(isProduct)
+```ts
+function isArrayOfProducts(obj: unknown): obj is Product[] {
+  return Array.isArray(obj) && obj.every(isProduct);
 }
 
-function isProduct(obj:unknown):obj is Product{
-  return obj !=null&& typeof (obj as Product).id === 'string'
+function isProduct(obj: unknown): obj is Product {
+  return obj != null && typeof (obj as Product).id === "string";
 }
 
-async function loadProducts():Promise<Product[]>{
-  const response = await fetch('https://api.mysize.com/products')
-  const products:unknown = await response.json()
-if(!isArrayOfProducts(products)){
-  throw new TypeError('Received malformed products API response')
-}
-  return products
+async function loadProducts(): Promise<Product[]> {
+  const response = await fetch("https://api.mysize.com/products");
+  const products: unknown = await response.json();
+  if (!isArrayOfProducts(products)) {
+    throw new TypeError("Received malformed products API response");
+  }
+  return products;
 }
 ```
 
@@ -124,17 +124,17 @@ if(!isArrayOfProducts(products)){
 
 用一个字母给作为名称，比如常用的 T 作为泛型名称！
 
-```
-function head<T>(arr:T[]):T |undefined{
-  return arr[0]
+```ts
+function head<T>(arr: T[]): T | undefined {
+  return arr[0];
 }
 ```
 
 用一个字母给作为名称，比如常用的 T 作为泛型名称！
 
-```
-function head<Element>(arr:Element[]):Element |undefined{
-  return arr[0]
+```ts
+function head<Element>(arr: Element[]): Element | undefined {
+  return arr[0];
 }
 ```
 
@@ -146,18 +146,18 @@ function head<Element>(arr:Element[]):Element |undefined{
 
 通过将值直接传递给 if 语句来检查值是否已定义。
 
-```
-function createNewMessagesResponse(countOfNewMessages?:number){
-  if(countOfNewMessages){
-    return `You have ${countOfNewMessages} new Messages`
+```ts
+function createNewMessagesResponse(countOfNewMessages?: number) {
+  if (countOfNewMessages) {
+    return `You have ${countOfNewMessages} new Messages`;
   }
-  return 'Error:'
+  return "Error:";
 }
 ```
 
 我们可以明确检查我们关心的情况。
 
-```
+```ts
 (countOfNewMessages?:number){
   if(countOfNewMessages !== undefined){
     return `You have ${countOfNewMessages} new Messages`
@@ -170,18 +170,18 @@ function createNewMessagesResponse(countOfNewMessages?:number){
 
 ## ！！操作符
 
-```
-function createNewMessagesResponse(countOfNewMessages?:number){
-  if(!!countOfNewMessages){
-    return `You have ${countOfNewMessages} new Messages`
+```ts
+function createNewMessagesResponse(countOfNewMessages?: number) {
+  if (!!countOfNewMessages) {
+    return `You have ${countOfNewMessages} new Messages`;
   }
-  return 'Error:'
+  return "Error:";
 }
 ```
 
 明确检查我们关心的状况。
 
-```
+```ts
 (countOfNewMessages?:number){
   if(countOfNewMessages !== undefined){
     return `You have ${countOfNewMessages} new Messages`
@@ -193,3 +193,60 @@ function createNewMessagesResponse(countOfNewMessages?:number){
 对我们中的一些人来说，理解！很简单。它看起来简短而简洁，如果您已经熟悉它，那么您就会知道它是关于什么的。这是将任何值转换为布尔值的简便方法。尤其是在代码库中，假值（如 null、undefined 和“”）之间没有明确的语义分离。
 
 用 !!通过宣传内部知识来混淆代码的真正含义。这使得新开发人员更不容易访问代码库，无论是一般开发的新手，还是 JavaScript 的新手。引入细微的错误也很容易。来自“非布尔布尔检查”的 countOfNewMessages 为 0 的问题仍然存在 !!。
+
+## 盘点 TypeScript 中的易混淆点
+
+### any VS unknown
+
+- any
+  用来表示可以赋值为任意类型，包括 any 类型值的属性和方法，所有类型都能被赋值给它，它也能被赋值给其他任何类型，在 TypeScript 中尽量避免使用
+
+```ts
+let anyThing: any = "hello";
+
+// 以下在编译时不会报错，在运行时报错，失去了 TypeScript 类型检查的意义
+console.log(anyThing.todo());
+console.log(anyThing.todo().abc);
+```
+
+- unknown
+  unknown 是 any 类型对应的安全类型，在对 unknown 类型的值执行大多数操作之前，我们必须进行某种形式的检查。而在对 any 类型的值执行操作之前，我们不必进行任何检查
+
+```ts
+let value: unknown;
+
+value = undefined; // ok
+value = null; // ok
+value = true; // ok
+value = 86; // ok
+value = "hello"; // ok
+value = {}; // ok
+value = Symbol(); // ok
+```
+
+```ts
+let value: unknown;
+
+let v1: unknown = value; // ok
+let v2: any = value; // ok
+let v3: undefined = value; // Error
+let v4: null = value; // Error
+let v5: string = value; // Error
+let v6: number = value; // Error
+let v7: boolean = value; // Error
+let v8: symbol = value; // Error
+
+console.log(value.key); // Error
+value.foo(); // Error
+```
+
+所以在操作 unknown 类型前，应该缩小类型范围，可以通过：typeof、instanceof、as、is
+
+```ts
+let value: unknown = "hello";
+
+// 通过 typeof 缩小类型范围
+if (typeof value === "string") {
+  console.log(value.length);
+}
+```
