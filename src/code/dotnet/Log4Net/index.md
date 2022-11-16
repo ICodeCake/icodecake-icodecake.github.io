@@ -9,14 +9,14 @@
 ### 创建静态对象\_logger
 
 ```csharp
-        //根据当前方法得数据类型获取记录器对象赋值给变量_logger
-        private static log4net.ILog _logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+//根据当前方法得数据类型获取记录器对象赋值给变量_logger
+private static log4net.ILog _logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        static Logger()
-        {
-            log4net.GlobalContext.Properties["Version"] = AssemblyHelper.Version.ToString(3);//设置当前版本信息
-            log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo("log4net.xml"));//加载配置文件
-        }
+static Logger()
+{
+  log4net.GlobalContext.Properties["Version"] = AssemblyHelper.Version.ToString(3);//设置当前版本信息
+  log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo("log4net.xml"));//加载配置文件
+}
 ```
 
 ### log4net.xml 文件配置信息
@@ -126,28 +126,27 @@
 ### ‍Code
 
 ```csharp
-   Task delayTask = Task.Delay(_calibrationCallbackMaxTime);
-   if (await Task.WhenAny(_isLeftCalibrationCallback?.Task, delayTask) == delayTask)
-    {
-        Logger.Debug("左眼调用CallBack超时，校准结束");
-        return false;
-    }
+Task delayTask = Task.Delay(_calibrationCallbackMaxTime);
+if (await Task.WhenAny(_isLeftCalibrationCallback?.Task, delayTask) == delayTask)
+{
+  Logger.Debug("左眼调用CallBack超时，校准结束");
+  return false;
+}
 ```
 
 - **Error**
-  1 常用于 Try……catch,将获取到的异常信息添加到日志文件
-  2 已经知道的错误提示信息直接添加到日志
+- 常用于 Try……catch,将获取到的异常信息添加到日志文件
+- 已经知道的错误提示信息直接添加到日志
 
 ```csharp
-   try
-    {
-      ……
-    }
-   catch (Exception ex)
-    {
-       Logger.Error("关闭 Unity 进程错误");
-       Logger.Error(ex);
-    }
+try
+{
+  ……
+}
+catch (Exception ex)
+{
+  Logger.Error(ex);
+}
 ```
 
 - **Ingo**
@@ -156,7 +155,7 @@
 ### ‍Code
 
 ```csharp
-   Logger.Info("SyncBox 断开连接");
+Logger.Info("提示信息");
 ```
 
 - **Warn**
@@ -164,7 +163,7 @@
 ### ‍Code
 
 ```csharp
-  logger.Warn("警告信息");
+logger.Warn("警告信息");
 ```
 
 - **Fatal**
@@ -172,5 +171,5 @@
 ### ‍Code
 
 ```csharp
-  logger.Fatal("发生致命错误");
+logger.Fatal("发生致命错误");
 ```

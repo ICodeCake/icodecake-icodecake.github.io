@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-4d577080","path":"/code/dotnet/Args/","title":"","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1667792776000,"contributors":[{"name":"Z\u5C0F\u67D3","email":"ryning@sina.com","commits":1}]},"filePathRelative":"code/dotnet/Args/index.md"}');export{e as data};

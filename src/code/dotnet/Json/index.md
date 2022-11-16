@@ -3,47 +3,47 @@
 ## Example
 
 ```csharp
-    public class JsonHelper
+public class JsonHelper
+{
+    private static JsonSerializerOptions _options = new JsonSerializerOptions()
     {
-        private static JsonSerializerOptions _options = new JsonSerializerOptions()
-        {
-            ReferenceHandler = ReferenceHandler.Preserve,
-            WriteIndented = true,
-            IncludeFields = true,
-            IgnoreReadOnlyProperties = true,
-            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-            DictionaryKeyPolicy = JsonNamingPolicy.CamelCase,
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            PropertyNameCaseInsensitive = true, //不区分大小写
-        };
+        ReferenceHandler = ReferenceHandler.Preserve,
+        WriteIndented = true,
+        IncludeFields = true,
+        IgnoreReadOnlyProperties = true,
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+        DictionaryKeyPolicy = JsonNamingPolicy.CamelCase,
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        PropertyNameCaseInsensitive = true, //不区分大小写
+    };
 
-        static JsonHelper()
-        {
-            _options.Converters.Add(new JsonStringEnumConverter());
-        }
-
-        public static string GetJosnString<T>(T t)
-        {
-            return JsonSerializer.Serialize(t, _options);
-        }
-
-        public static T GetJosnObject<T>(string jsonString)
-        {
-            return JsonSerializer.Deserialize<T>(jsonString, _options);
-        }
+    static JsonHelper()
+    {
+        _options.Converters.Add(new JsonStringEnumConverter());
     }
 
-    public class TestModel
+    public static string GetJosnString<T>(T t)
     {
-        [JsonIgnore]
-        public int Id { get; set; }
-
-        [JsonInclude]
-        public string Name { get; set; }
-
-        [JsonPropertyName("type")]
-        public Type Type { get; set; }
+        return JsonSerializer.Serialize(t, _options);
     }
+
+    public static T GetJosnObject<T>(string jsonString)
+    {
+        return JsonSerializer.Deserialize<T>(jsonString, _options);
+    }
+}
+
+public class TestModel
+{
+    [JsonIgnore]
+    public int Id { get; set; }
+
+    [JsonInclude]
+    public string Name { get; set; }
+
+    [JsonPropertyName("type")]
+    public Type Type { get; set; }
+}
 
 ```
 
@@ -62,5 +62,5 @@
 
 ## 参考资料
 
-https://docs.microsoft.com/zh-cn/dotnet/standard/serialization/system-text-json-overview
-https://www.codeproject.com/Articles/5284591/Adding-type-to-System-Text-Json-serialization-like
+- [.NET 中的 JSON 序列化和反序列化](https://docs.microsoft.com/zh-cn/dotnet/standard/serialization/system-text-json-overview)
+- [Adding $type to System.Text.Json Serialization like in Newtonsoft for Dynamic Object Properties - CodeProject](https://www.codeproject.com/Articles/5284591/Adding-type-to-System-Text-Json-serialization-like)

@@ -44,6 +44,7 @@ export default defineUserConfig({
     repo: "https://github.com/icodecake/icodecake.github.io",
     repoLabel: "GitHub",
     editLink: false,
+    lastUpdated: false,
     lastUpdatedText: "上次更新",
     contributors: true,
     contributorsText: "贡献者",
@@ -156,7 +157,7 @@ export default defineUserConfig({
               children: [],
             },
             {
-              text: "中英文切换",
+              text: "WPF 本地化",
               link: "/code/dotnet/Language",
               children: [],
             },
@@ -221,8 +222,43 @@ export default defineUserConfig({
               ],
             },
             {
-              text: "Log4Net",
-              link: "/code/dotnet/Log4Net/",
+              text: "Json",
+              children: [
+                {
+                  text: "System.Text.Json",
+                  link: "/code/dotnet/Json/",
+                  children: [],
+                },
+              ],
+            },
+            {
+              text: "Log",
+              children: [
+                {
+                  text: "Log4Net",
+                  link: "/code/dotnet/Log4Net/",
+                  children: [],
+                },
+              ],
+            },
+            {
+              text: "VS2019 基于.net 5 单文件打包",
+              link: "/code/dotnet/Net5Publish/",
+              children: [],
+            },
+            {
+              text: "无缓存计算平均数",
+              link: "/code/dotnet/DynamicMeanNumber/",
+              children: [],
+            },
+            {
+              text: "视频压缩",
+              link: "/code/dotnet/VideoCompression/",
+              children: [],
+            },
+            {
+              text: "语音识别",
+              link: "/code/dotnet/Speech/",
               children: [],
             },
           ],

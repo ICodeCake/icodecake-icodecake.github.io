@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-18943652","path":"/code/dotnet/","title":"","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[],"git":{"contributors":[{"name":"Z\u5C0F\u67D3","email":"ryning@sina.com","commits":1}]},"filePathRelative":"code/dotnet/index.md"}');export{t as data};
