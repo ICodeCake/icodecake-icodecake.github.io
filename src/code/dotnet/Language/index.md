@@ -22,9 +22,9 @@
 在文件顶部引入命名空间，之后把需要中英文切换的文字替换
 
 ```xml
-<--引入-->
+<!--引入-->
  xmlns:resx="clr-namespace:MyProject.Test.Languages"
-<--使用-->
+<!--使用-->
 <TextBlock Text="{x:Static resx:Name}" >
 ```
 

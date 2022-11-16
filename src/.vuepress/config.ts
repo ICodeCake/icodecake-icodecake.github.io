@@ -44,7 +44,7 @@ export default defineUserConfig({
     repo: "https://github.com/icodecake/icodecake.github.io",
     repoLabel: "GitHub",
     editLink: false,
-    lastUpdated: false,
+    lastUpdated: true,
     lastUpdatedText: "上次更新",
     contributors: true,
     contributorsText: "贡献者",
@@ -52,17 +52,8 @@ export default defineUserConfig({
     navbar: [
       { text: ".NET", link: "/code/dotnet/" },
       { text: "WEB", link: "/code/web/" },
-      { text: "DB", link: "/code/db/" },
+      { text: "Database", link: "/code/database/" },
       { text: "Test", link: "/code/test/" },
-      {
-        text: "Sample",
-        children: [
-          {
-            text: "Markdown",
-            children: ["/sample/markdown.md"],
-          },
-        ],
-      },
       // // 控制元素何时被激活
       // {
       //   text: "Group 2",
@@ -205,8 +196,8 @@ export default defineUserConfig({
                   children: [],
                 },
                 {
-                  text: "Thread Or Task",
-                  link: "/code/dotnet/Multithreading/ThreadOrTask/",
+                  text: "Thread and Task",
+                  link: "/code/dotnet/Multithreading/ThreadAndTask/",
                   children: [],
                 },
                 {
@@ -215,7 +206,7 @@ export default defineUserConfig({
                   children: [],
                 },
                 {
-                  text: "Async Await",
+                  text: "Async and Await",
                   link: "/code/dotnet/Multithreading/AsyncAndAwait/",
                   children: [],
                 },
@@ -242,7 +233,7 @@ export default defineUserConfig({
               ],
             },
             {
-              text: "VS2019 基于.net 5 单文件打包",
+              text: "VS2019 基于.NET5 单文件打包",
               link: "/code/dotnet/Net5Publish/",
               children: [],
             },
@@ -259,6 +250,11 @@ export default defineUserConfig({
             {
               text: "语音识别",
               link: "/code/dotnet/Speech/",
+              children: [],
+            },
+            {
+              text: "HttpContext.Items vs HttpContext.Features",
+              link: "/code/dotnet/HttpContext/",
               children: [],
             },
           ],
