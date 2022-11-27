@@ -120,6 +120,11 @@ export default defineUserConfig({
               link: "/code/web/vue/vue3的语法糖",
               children: [],
             },
+            {
+              text: "vue3基础语法使用",
+              link: "/code/web/vue/vue3基础语法使用",
+              children: [],
+            },
           ],
         },
         {
@@ -128,6 +133,11 @@ export default defineUserConfig({
             {
               text: "pnpm",
               link: "/code/web/other/pnpm",
+              children: [],
+            },
+            {
+              text: "uniapp",
+              link: "/code/web/other/uniapp",
               children: [],
             },
           ],
