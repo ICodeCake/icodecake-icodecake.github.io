@@ -85,6 +85,11 @@ export default defineUserConfig({
               link: "/code/web/css/TransformVsPosition",
               children: [],
             },
+            {
+              text: "网站变灰",
+              link: "/code/web/css/网站变灰",
+              children: [],
+            },
           ],
         },
         {
@@ -108,6 +113,11 @@ export default defineUserConfig({
             {
               text: "In the Loop",
               link: "/code/web/ts/InTheLoop",
+              children: [],
+            },
+            {
+              text: "js与ts中各种循环遍历方式",
+              link: "/code/web/ts/js与ts中各种循环遍历方式",
               children: [],
             },
           ],
