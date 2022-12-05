@@ -152,5 +152,5 @@ private void SystemSpeech_SpeechRecognitionRejected(object sender, System.Speech
 ## 参考资料
 
 - [SpeechRecognitionEngine Class](<https://learn.microsoft.com/en-us/previous-versions/office/developer/speech-technologies/dd147134(v=office.14)>)
-- [SpeechRecognizer Class](https://learn.microsoft.com/en-us/dotnet/api/system.speech.recognition.speechrecognizer?view=netframework-4.8）
+- [SpeechRecognizer Class](https://learn.microsoft.com/en-us/dotnet/api/system.speech.recognition.speechrecognizer?view=netframework-4.8)
 - [Voice Recognition : Speech Recognition with .NET Desktop Applications](https://docs.microsoft.com/en-us/archive/msdn-magazine/2014/december/voice-recognition-speech-recognition-with-net-desktop-applications)
