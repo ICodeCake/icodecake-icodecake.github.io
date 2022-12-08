@@ -31,6 +31,6 @@
 ![Image](./assets/1.jpg)
 
 ## 参考资料
--[30 分钟学会 Flex 布局](https://zhuanlan.zhihu.com/p/25303493)
+- [30 分钟学会 Flex 布局](https://zhuanlan.zhihu.com/p/25303493)
 
 

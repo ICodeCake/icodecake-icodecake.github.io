@@ -199,4 +199,4 @@ show indexes from 表名\G
 ```
 
 ## 参考资料
--[MySQL常见的三种存储引擎（InnoDB、MyISAM、MEMORY）](https://zhuanlan.zhihu.com/p/508538016)
+- [MySQL常见的三种存储引擎（InnoDB、MyISAM、MEMORY）](https://zhuanlan.zhihu.com/p/508538016)
