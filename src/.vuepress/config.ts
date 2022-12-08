@@ -44,7 +44,7 @@ export default defineUserConfig({
     repo: "https://github.com/icodecake/icodecake.github.io",
     repoLabel: "GitHub",
     editLink: false,
-    lastUpdated: true,
+    lastUpdated: false,
     lastUpdatedText: "上次更新",
     contributors: true,
     contributorsText: "贡献者",
@@ -75,7 +75,12 @@ export default defineUserConfig({
       "/code/web/": [
         {
           text: "Html",
-          children: [],
+          children: [{
+            text: "Flex 下的基本对齐",
+            link: "/code/web/html/FlexLayout",
+            children: [],
+          },
+          ],
         },
         {
           text: "Css",
@@ -295,6 +300,18 @@ export default defineUserConfig({
           ],
         },
       ],
+      "/code/database/": [
+        {
+          text: "MySQL",
+          children: [{
+            text: "MySQL 优化",
+            link: "/code/database/OptimizationMySQL",
+            children: [],
+          },
+          ],
+        },
+      ],
+
     },
   }),
 });
