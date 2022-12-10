@@ -75,11 +75,12 @@ export default defineUserConfig({
       "/code/web/": [
         {
           text: "Html",
-          children: [{
-            text: "Flex 下的基本对齐",
-            link: "/code/web/html/FlexLayout",
-            children: [],
-          },
+          children: [
+            {
+              text: "Flex 下的基本对齐",
+              link: "/code/web/html/FlexLayout",
+              children: [],
+            },
           ],
         },
         {
@@ -125,6 +126,11 @@ export default defineUserConfig({
               link: "/code/web/ts/js与ts中各种循环遍历方式",
               children: [],
             },
+            {
+              text: "10个Javascript技巧和最佳实践",
+              link: "/code/web/ts/10个Javascript技巧和最佳实践",
+              children: [],
+            },
           ],
         },
         {
@@ -153,6 +159,11 @@ export default defineUserConfig({
             {
               text: "uniapp",
               link: "/code/web/other/uniapp",
+              children: [],
+            },
+            {
+              text: "github的其它知识",
+              link: "/code/web/other/github的其它知识",
               children: [],
             },
           ],
@@ -303,15 +314,15 @@ export default defineUserConfig({
       "/code/database/": [
         {
           text: "MySQL",
-          children: [{
-            text: "MySQL 优化",
-            link: "/code/database/OptimizationMySQL",
-            children: [],
-          },
+          children: [
+            {
+              text: "MySQL 优化",
+              link: "/code/database/OptimizationMySQL",
+              children: [],
+            },
           ],
         },
       ],
-
     },
   }),
 });
