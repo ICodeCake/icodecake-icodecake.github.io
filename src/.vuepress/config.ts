@@ -44,7 +44,7 @@ export default defineUserConfig({
     repo: "https://github.com/icodecake/icodecake.github.io",
     repoLabel: "GitHub",
     editLink: false,
-    lastUpdated: true,
+    lastUpdated: false,
     lastUpdatedText: "上次更新",
     contributors: true,
     contributorsText: "贡献者",
@@ -75,7 +75,13 @@ export default defineUserConfig({
       "/code/web/": [
         {
           text: "Html",
-          children: [],
+          children: [
+            {
+              text: "Flex 下的基本对齐",
+              link: "/code/web/html/FlexLayout",
+              children: [],
+            },
+          ],
         },
         {
           text: "Css",
@@ -120,6 +126,11 @@ export default defineUserConfig({
               link: "/code/web/ts/js与ts中各种循环遍历方式",
               children: [],
             },
+            {
+              text: "10个Javascript技巧和最佳实践",
+              link: "/code/web/ts/10个Javascript技巧和最佳实践",
+              children: [],
+            },
           ],
         },
         {
@@ -148,6 +159,11 @@ export default defineUserConfig({
             {
               text: "uniapp",
               link: "/code/web/other/uniapp",
+              children: [],
+            },
+            {
+              text: "github的其它知识",
+              link: "/code/web/other/github的其它知识",
               children: [],
             },
           ],
@@ -290,6 +306,18 @@ export default defineUserConfig({
             {
               text: "C#调用Matlab函数",
               link: "/code/dotnet/matlab",
+              children: [],
+            },
+          ],
+        },
+      ],
+      "/code/database/": [
+        {
+          text: "MySQL",
+          children: [
+            {
+              text: "MySQL 优化",
+              link: "/code/database/OptimizationMySQL",
               children: [],
             },
           ],
