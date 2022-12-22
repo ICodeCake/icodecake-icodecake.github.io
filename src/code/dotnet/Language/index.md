@@ -40,6 +40,13 @@ var name = Name;
 
 > 在 xaml 页中如果有需要中英文替换的字段，可以选中该字段，右键移动到资源，弹出 ResxManager 界面，之后再 ResxManager 中填写中文字段即可，如果弹不出这个界面重启 Vs 可解决
 
+### 语言切换
+
+```cs
+Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(isChinese ? "zh-Hans" : string.Empty);
+
+```
+
 ## 参考资料
 
 - [WPF: 本地化(Localization) 实现](https://www.cnblogs.com/wpinfo/p/wpf_localization.html)

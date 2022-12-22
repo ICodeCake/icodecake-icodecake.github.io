@@ -53,7 +53,7 @@ export default defineUserConfig({
       { text: ".NET", link: "/code/dotnet/" },
       { text: "WEB", link: "/code/web/" },
       { text: "Database", link: "/code/database/" },
-      { text: "Test", link: "/code/test/" },
+      { text: "Other", link: "/code/other/" },
       // // 控制元素何时被激活
       // {
       //   text: "Group 2",
